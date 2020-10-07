@@ -1,0 +1,62 @@
+=begin
+Inheritance
+- Relation between two classes where a child class inherits all features of its parent class
+- Method from the parent can be overridden in the child and new login can be added
+
+------------------- Person -----------------
+|                                          |
+Student                                 Employee
+|     |                                 |      |   \
+IT   Science                           Teacher HR  Utility
+
+In there Person is super class of Student and Employee
+
+Student and Employee are child class of Person
+
+IT and Science are child class of Student
+
+Student is super class of IT and Science
+
+
+Teacher , HR , Utility are child class of Employee
+Employee is super class of Teacher , HR and Utility
+=end
+
+class Animal
+def breathe
+puts "Inhale and Exhale"
+end
+end
+
+#Child Class
+class Dog < Animal
+def sound
+puts "Woof Woof"
+end
+def bark
+puts "Bark Bark"
+end
+end
+#Creater an object
+dog = Dog.new
+dog.bark
+dog.sound
+dog.breathe
+puts '----------------------------------'
+class Cat < Animal
+def sound
+puts "Meow Meow"
+end
+def bark 
+puts "Meowing...."
+end
+def name(name)
+@name = name
+puts "The name of this Animal is #{name}"
+end
+end
+c = Cat.new
+c.sound
+c.bark
+c.name("Tom")
+c.breathe
